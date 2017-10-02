@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo 'make nnnn' 
+		echo 'start'
+                bat Script.bat 
+		echo 'end'
             }
         }
     }

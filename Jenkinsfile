@@ -6,7 +6,9 @@ node {
                 bat 'Script.bat' 
 		echo 'end'
 		
-		properties = readProperties file: 'Con.properties'
+		properties = new Properties()
+		File propertiesFile = new File ("${workspace}/Con.properties")
+		properties.load(propertiesFile.newDataInputStream())
 		echo "Immediate one ${properties.repo}"
 		 
             }

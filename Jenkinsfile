@@ -6,7 +6,7 @@ node {
                 bat 'Script.bat' 
 		echo 'end'
 		
-		def fileContents = readFile(${workspace} + "/" + 'aa.txt')		
+		def fileContents = readFile('aa.txt')		
 		echo "Immediate one"
 		 
             }

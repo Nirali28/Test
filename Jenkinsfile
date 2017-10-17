@@ -1,4 +1,4 @@
-properties = null
+proprties = null
 
 node {
         stage('Build') { 
@@ -6,8 +6,8 @@ node {
                 bat 'Script.bat' 
 		echo 'end'
 		
-		properties = readProperties file: 'aa.properties'
-		echo "Immediate one ${properties.repo}"
+		def fileContents = readFile(${workspace} + "/" + 'aa.txt')		
+		echo "Immediate one"
 		 
             }
 }

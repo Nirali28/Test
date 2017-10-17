@@ -1,7 +1,4 @@
-pipeline {
-    agent any 
-
-    stages {
+node {
         stage('Build') { 
             steps { 
 		echo 'start'
@@ -13,5 +10,4 @@ pipeline {
 		echo "${Var1}"
             }
         }
-    }
 }

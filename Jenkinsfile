@@ -7,7 +7,7 @@ node {
 		echo 'end'
 		
 		Properties props = new Properties()
-        	File propsFile = new File('')
+        	File propsFile = new File('aa.properties')
         	propsFile.withInputStream {
             		props.load it
         	}

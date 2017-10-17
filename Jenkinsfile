@@ -6,11 +6,7 @@ node {
                 bat 'Script.bat' 
 		echo 'end'
 		
-		Properties props = new Properties()
-        	File propsFile = new File('aa.properties')
-        	propsFile.withInputStream {
-            		props.load it
-        	}
+		def fileContents = readFile(pwd() + "/" + 'aa.txt')
 		 
             }
 }

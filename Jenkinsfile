@@ -6,8 +6,11 @@ node {
                 bat 'Script.bat' 
 		echo 'end'
 		
-		def fileContents = readFile('aa.txt')		
-		echo "Immediate one"
+		Properties props = new Properties()
+        	File propsFile = new File('')
+        	propsFile.withInputStream {
+            		props.load it
+        	}
 		 
             }
 }

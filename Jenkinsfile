@@ -23,11 +23,11 @@ node {
 		//}
 		
 		//Send Email 
-		String recipient = "${properties.emailNotificationTo}"
+		//String recipient = "${properties.emailNotificationTo}"
 		mail subject: "${env.JOB_NAME} (${env.BUILD_NUMBER}) ---",
          	body: "It appears that ${env.BUILD_URL} is ---, somebody should do something about that",
-           	to: recipient,
-      		replyTo: recipient,
+           	to: "${properties.emailNotificationTo}",
+      		replyTo: "${properties.emailNotificationTo}",
  		from: 'noreply@ci.jenkins.io'
             }
 }

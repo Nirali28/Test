@@ -24,6 +24,8 @@ node {
 		
 		//Send Email 
 		//String recipient = "${properties.emailNotificationTo}"
+		emailext body: 'Hello', subject: 'Hi', to: 'patelnira28@gmail.com'
+		echo 'done'
 		mail subject: "${env.JOB_NAME} (${env.BUILD_NUMBER}) ---",
          	body: "It appears that ${env.BUILD_URL} is ---, somebody should do something about that",
            	to: "${properties.emailNotificationTo}",

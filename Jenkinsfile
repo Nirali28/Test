@@ -1,7 +1,13 @@
+properties = null
+
 node {
 	
 	stage('Checkout'){
 	  checkout scm
+	  properties = new Properties()
+          File propertiesFile = new File("${env.WORKSPACE}/a.properties")
+          properties.load(propertiesFile.newDataInputStream())
+          echo "Immediate one ${properties.repo}"
 	}
 	stage('Build') { 
 		echo 'start'

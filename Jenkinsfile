@@ -6,6 +6,11 @@ node {
 	  checkout scm
 	  properties = readProperties file: 'a.properties'
           echo "Immediate one ${properties.flagEmail}"
+		if(properties.flagEmail){
+			echo 'Send Email'
+		}else{
+			echo 'Do not send Email'
+		}
 	}
 	stage('Build') { 
 		echo 'start'

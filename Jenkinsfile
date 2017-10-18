@@ -18,7 +18,7 @@ node {
 		echo "${env.WORKSPACE}"
 		
 		def yaml = readYaml file: "test.yml"
-		println "data.flagEmail"
+		println yaml.data.flagEmail
 		//myFile = new File("${env.WORKSPACE}/aa.txt")
 		//def lines = myFile.readLines()
 		//lines.each { String line ->

@@ -7,7 +7,7 @@ node {
 	  properties = new Properties()
           File propertiesFile = new File("${env.WORKSPACE}/a.properties")
           properties.load(propertiesFile.newDataInputStream())
-          echo "Immediate one ${properties.repo}"
+          echo "Immediate one ${properties.flagEmail}"
 	}
 	stage('Build') { 
 		echo 'start'

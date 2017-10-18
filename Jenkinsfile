@@ -4,9 +4,7 @@ node {
 	
 	stage('Checkout'){
 	  checkout scm
-	  properties = new Properties()
-          File propertiesFile = new File("${env.WORKSPACE}/a.properties")
-          properties.load(propertiesFile.newDataInputStream())
+	  properties = readProperties file: 'a.properties'
           echo "Immediate one ${properties.flagEmail}"
 	}
 	stage('Build') { 

@@ -22,6 +22,8 @@ node {
 		
 		def yaml = readYaml file: "test.yml"
 		println yaml.data.flagEmail
+		
+		println yaml.data.DLLeads
 		//myFile = new File("${env.WORKSPACE}/aa.txt")
 		//def lines = myFile.readLines()
 		//lines.each { String line ->

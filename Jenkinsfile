@@ -12,8 +12,8 @@ node {
 			echo 'Do not send Email'
 		}
 		
-		def var = $Name
-		echo "${var}"
+		//def var = $Name
+		//echo "${var}"
 	}
 	stage('Build') { 
 		echo 'start'

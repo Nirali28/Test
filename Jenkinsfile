@@ -17,7 +17,7 @@ node {
 	}
 	stage('Build') { 
 		echo 'start'
-		echo 'end'
+		
 		echo "${env.WORKSPACE}"
 		
 		def yaml = readYaml file: "test.yml"
@@ -29,7 +29,7 @@ node {
 		//lines.each { String line ->
   		//	println line
 		//}
-		
+		echo 'end'
 		//Send Email 
 		//String recipient = "${properties.emailNotificationTo}"
 		emailext body: 'Hello', subject: 'Hi', to: 'patelnira28@gmail.com'
